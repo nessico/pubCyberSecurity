@@ -1,0 +1,53 @@
+catpetpg.socket.on("digging_found", (function(e) {
+                    window.catpet.activePets[e.id] && window.catpet.activePets[e.id].diggingFound(e)
+                }))
+
+animation for looks ^
+
+catpetpg.doAction("dig")
+
+
+actual result ^
+
+
+
+catpetpg.socket.on("digging_found", (function(e) {
+                    window.catpet.activePets["30ykSvDTH9luJh-YAllU"] && window.catpet.activePets["30ykSvDTH9luJh-YAllU"].diggingFound(e)
+                }
+                ))
+                                     
+
+socket.on("user_action
+
+  document.getElementById("catpet-dig").addEventListener("click", (function(e) {
+                    var r = document.getElementById("p").getBoundingClientRect();
+                    t.socket.emit("action", {
+                        name: "dig",
+                        locationX: e.clientX - r.left,
+                        locationY: e.clientY - r.top
+                    }),
+                    $("#catpet-menu").hide()
+
+t sockets are the original document .. so look for t socket emits?
+
+do action("dig" isnt in any of the dist js code but it still works . so this is confirmed server side
+
+line 95932 we see that doAction client side is sent as socket emit as action to server side
+
+do double trace
+
+server socket emit for what u want			(action)
+then find serve rvalue of that socket emit		(dig)
+then find the client side equivalent that u can call 	(do action)
+
+doAction: function(e) {
+                this.socket.emit("action", {
+                    name: e
+                }),
+                this.closeMenu()
+            },
+
+**
+ $("#catpet-menu").hide()
+
+

